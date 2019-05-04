@@ -7,9 +7,9 @@ class MainWelcome
 		@date = date
 		@hour = hour
 		@month = month
-		@imageUri = "https://github.com/SuperBigBang/TestReactNativeApp4NorNick/blob/master/js/resources/localTestResources/april.png?raw=true"
 
-chooseWelcomeText
+    chooseWelcomeText
+    setImageURI
 end
 
 def chooseWelcomeText()
@@ -22,6 +22,11 @@ def chooseWelcomeText()
    else
    @welcomeText = "Доброй ночи!"
    end
- end
+end
+
+  def setImageURI()
+    month_img = MonthImg.find_by(month_id: @month)
+    @imageUri = month_img.month_img
+  end
 
 end
