@@ -1,0 +1,13 @@
+<p>
+  <strong>Welcome text:</strong>
+  <%= @mainWelcome.welcomeText %>
+</p>
+<p>
+  <strong>Current date and time:</strong>
+  <%= @mainWelcome.date %>
+</p>
+<p>
+  <strong>Image URI:</strong>
+  <%= @mainWelcome.imageUri %>
+</p>
+<%= image_tag @mainWelcome.imageUri %>
