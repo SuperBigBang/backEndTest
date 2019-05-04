@@ -15,10 +15,9 @@ def index
 end
 
 =begin
-private
 def new
   for i in 1..12
-    month_img = MonthImg.create(month_id: i, month_img: image_url("/month/#{i}.png", host: "http://localhost:3000"))
+    month_img = MonthImg.create(month_id: i, month_img: url_for("/month/#{i}.png")) #, host: "http://localhost:3000")
     #MonthImg.destroy_all
   end
 end
