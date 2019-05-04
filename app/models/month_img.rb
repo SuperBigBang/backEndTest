@@ -1,0 +1,2 @@
+class MonthImg < ApplicationRecord
+end

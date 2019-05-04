@@ -10,12 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_04_080659) do
+ActiveRecord::Schema.define(version: 2019_05_04_110149) do
 
   create_table "main_welcomes", force: :cascade do |t|
     t.string "welcomeText"
     t.string "date"
     t.string "imageUri"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "month_imgs", force: :cascade do |t|
+    t.string "month_id"
+    t.string "month_img"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
