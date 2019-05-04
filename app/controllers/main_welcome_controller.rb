@@ -1,5 +1,6 @@
 class MainWelcomeController < ApplicationController
   #include ActionView::Helpers::AssetUrlHelper
+  include Response
 
 def index
   dateTime = DateTime.now
@@ -7,8 +8,10 @@ def index
     month = dateTime.month
     hour = dateTime.hour
 
-  @mainWelcome = MainWelcome.new(formattedDateAndTime, hour, month)
+  @mainWelcome = MainWelcome.new
+  @mainWelcome.constructor(formattedDateAndTime, hour, month)
 
+  js_response(@mainWelcome)
 end
 
 =begin

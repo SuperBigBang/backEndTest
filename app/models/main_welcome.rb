@@ -1,9 +1,9 @@
-class MainWelcome
-	attr_accessor :welcomeText
+class MainWelcome < ApplicationRecord
+  attr_accessor :welcomeText
 	attr_accessor :date
 	attr_accessor :imageUri
 
-	def initialize(date, hour, month)
+  def constructor(date, hour, month)
 		@date = date
 		@hour = hour
 		@month = month
@@ -28,5 +28,4 @@ end
     month_img = MonthImg.find_by(month_id: @month)
     @imageUri = month_img.month_img
   end
-
 end
