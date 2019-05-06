@@ -13,15 +13,15 @@ class MainWelcome < ApplicationRecord
 end
 
 def chooseWelcomeText()
-   if @hour >= 6 && @hour <= 11
+  if @hour >= 6 && @hour <= 11
    @welcomeText = "Доброе утро!"
-   elsif @hour >= 13 && @hour <= 17
+  elsif @hour >= 12 && @hour <= 17
    @welcomeText = "Добрый день!"
-   elsif @hour >= 18 && @hour <= 23
+  elsif @hour >= 18 && @hour <= 23
    @welcomeText = "Добрый вечер!"
-   else
+  else
    @welcomeText = "Доброй ночи!"
-   end
+  end
 end
 
   def setImageURI()
